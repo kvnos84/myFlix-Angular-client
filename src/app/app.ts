@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.scss']  // Correct spelling and file
 })
 export class App {
   protected title = 'myFlix-Angular-client';
