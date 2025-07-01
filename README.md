@@ -1,59 +1,46 @@
-# MyFlixAngularClient
+# myFlixAngularClient
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+This is a single-page, responsive Angular application that allows users to browse and interact with movies from the myFlix API. Users can register, log in, view movie details, save favorite movies, and manage their profile.
 
-## Development server
+> This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Live Demo
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔗 [View Deployed App](https://your-angular-app-url.com)  
+📄 [View Documentation](./docs/index.html)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📦 Features
 
-```bash
-ng generate component component-name
-```
+- User registration and login with JWT authentication
+- View a list of movies, including genre and director info
+- Add/remove favorite movies
+- Edit and delete user profile
+- Responsive UI built with Angular 17+
+- Integrated with a Node.js/Express backend API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🧪 Technologies Used
 
-## Building
+- Angular 17+
+- TypeScript
+- RxJS
+- Angular Router
+- SCSS
+- Node.js & Express (backend)
+- MongoDB (backend database)
+- JWT authentication
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## ⚙️ Development Setup
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### ✅ Install dependencies
 
 ```bash
-ng e2e
+npm install
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
