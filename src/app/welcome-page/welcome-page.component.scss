@@ -1,0 +1,99 @@
+/* Background layout */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/7d2359a4-434f-4efa-9ff3-e9d38a8bde7f/web/DE-en-20250707-TRIFECTA-perspective_44f54baf-670a-415f-ae97-449732d16b5d_large.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; // required for ::before overlay to work
+  overflow: hidden;
+}
+
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7); // dark overlay
+  z-index: 0;
+}
+
+.welcome-container > * {
+  position: relative;
+  z-index: 1; // ensures content appears above the dark overlay
+}
+
+.subheadline {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.logo {
+  width: 1000px; // or adjust as needed
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+  max-height: 150px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* New Button Hover Slide Effect */
+.button_slide {
+  padding: 1em 2em;
+  display: inline-block;
+  font-family: "Roboto", Monaco, monospace;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #cf0000;
+  animation: leave 0.4s forwards;
+  transition: color 0.3s ease;
+  min-width: 260px;
+}
+
+.slide_right:hover {
+  animation: hover 0.4s forwards;
+}
+
+@keyframes hover {
+  from {
+    box-shadow: inset 0 0 0 0.01px #cf0000;
+  }
+  to {
+    box-shadow: inset 15em 0 0 0.01px #ff0000;
+    color: #fff;
+  }
+}
+
+@keyframes leave {
+  from {
+    box-shadow: inset -15em 0 0 0.01px #ff0000;
+    color: #fff;
+  }
+  to {
+    box-shadow: inset 0 0 0 0.01px #cf0000;
+  }
+}
+
+.logo {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

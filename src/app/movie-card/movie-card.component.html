@@ -1,5 +1,12 @@
-<div class="movie-container">
+<!-- Loading Message -->
+<div *ngIf="movies.length === 0">
+  <p>Loading movies...</p>
+</div>
+
+<!-- Movie Cards -->
+<div class="movie-container" *ngIf="movies.length > 0">
   <mat-card *ngFor="let movie of movies" class="movie-card">
+    <img mat-card-image [src]="movie.ImagePath" alt="{{ movie.Title }}" />
     <mat-card-header>
       <mat-card-title>{{ movie.Title }}</mat-card-title>
       <mat-card-subtitle>{{ movie.Genre.Name }}</mat-card-subtitle>

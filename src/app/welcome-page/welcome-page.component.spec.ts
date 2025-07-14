@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WelcomePage } from './welcome-page.component';
+import { WelcomePage } from './welcome-page/welcome-page.component';
 
 describe('WelcomePage', () => {
   let component: WelcomePage;

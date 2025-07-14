@@ -38,7 +38,7 @@ export class UserRegistrationFormComponent implements OnInit {
 
   registerUser(): void {
     console.log('Attempting to register:', this.userData);
-    
+
     this.fetchApiData.userRegistration(this.userData).subscribe({
       next: () => {
         this.dialogRef.close();
