@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FetchApiDataService } from '../fetch-api-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -31,7 +32,8 @@ export class UserLoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -47,7 +49,7 @@ export class UserLoginFormComponent implements OnInit {
           duration: 2000
         });
 
-        window.location.reload(); // crude fallback, but OK for now
+        this.router.navigate(['movies']);
       },
       error: (error) => {
         console.error('Login failed:', error);

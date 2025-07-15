@@ -28,3 +28,17 @@
 .button-group button:hover {
   background-color: #4791db; // lighter blue on hover
 }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.active-link {
+  background-color: rgba(81, 218, 111, 0.15);
+  border-radius: 4px;
+}

@@ -10,7 +10,7 @@ import { ViewEncapsulation } from '@angular/core';
   styleUrls: ['./welcome-page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class WelcomePage {
+export class WelcomePageComponent {
   constructor(private dialog: MatDialog) {}
 
   openUserRegistrationDialog(): void {

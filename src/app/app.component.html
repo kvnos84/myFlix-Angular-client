@@ -1,1 +1,15 @@
+<!-- ✅ Only show navbar when user is logged in and not on welcome page -->
+<mat-toolbar color="primary">
+  <span class="brand">myFlix</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/movies" routerLinkActive="active-link">
+    Movies
+  </button>
+  <button mat-button routerLink="/profile" routerLinkActive="active-link">
+    My Profile
+  </button>
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<!-- ✅ Always show routed content here -->
 <router-outlet></router-outlet>

@@ -9,24 +9,28 @@ import { AppComponent } from './app.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
-import { WelcomePage } from './welcome-page/welcome-page.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomePage,
+    WelcomePageComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
     MatDialogModule,
     MatButtonModule,
-    FormsModule,
+    MatToolbarModule,
+    RouterModule,
     UserLoginFormComponent,
     UserRegistrationFormComponent
   ],

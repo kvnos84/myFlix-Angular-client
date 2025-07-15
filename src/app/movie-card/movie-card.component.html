@@ -3,16 +3,45 @@
   <p>Loading movies...</p>
 </div>
 
-<!-- Movie Cards -->
+<!-- Movie Cards Grid -->
 <div class="movie-container" *ngIf="movies.length > 0">
   <mat-card *ngFor="let movie of movies" class="movie-card">
-    <img mat-card-image [src]="movie.ImagePath" alt="{{ movie.Title }}" />
+    <!-- Poster Image -->
+    <img class="poster" [src]="movie.ImagePath" [alt]="movie.Title" />
+
+    <!-- Title & Genre -->
     <mat-card-header>
       <mat-card-title>{{ movie.Title }}</mat-card-title>
       <mat-card-subtitle>{{ movie.Genre.Name }}</mat-card-subtitle>
     </mat-card-header>
+
+    <!-- Description -->
     <mat-card-content>
       <p>{{ movie.Description }}</p>
     </mat-card-content>
+
+    <!-- Actions -->
+    <mat-card-actions>
+      <button mat-button (click)="openSynopsisDialog(movie.Description)">
+        Synopsis
+      </button>
+      <button mat-button (click)="openGenreDialog(movie.Genre)">Genre</button>
+      <button mat-button (click)="openDirectorDialog(movie.Director)">
+        Director
+      </button>
+
+      <!-- Favorite Toggle -->
+      <button mat-icon-button (click)="toggleFavorite(movie)">
+        <mat-icon color="warn">
+          {{ isFavorite(movie._id) ? "favorite" : "favorite_border" }}
+        </mat-icon>
+      </button>
+      <!-- Optional: Tooltip -->
+      <!--
+      <mat-tooltip>
+        {{ isFavorite(movie._id) ? 'Remove from favorites' : 'Add to favorites' }}
+      </mat-tooltip>
+      -->
+    </mat-card-actions>
   </mat-card>
 </div>
